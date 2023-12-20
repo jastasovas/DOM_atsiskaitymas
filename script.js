@@ -4,9 +4,13 @@ let parag = document.createElement("p");
 plusBtn.innerText = "Plus";
 minusBtn.innerText = "Minus";
 plusBtn.style.borderRadius = "15px";
+plusBtn.style.background = "pink";
 minusBtn.style.borderRadius = "15px";
+minusBtn.style.background = "pink";
 plusBtn.style.width = "100px";
 minusBtn.style.width = "100px";
+parag.style.fontSize = "30px";
+parag.style.fontFamily = "Cursive";
 let a = 0;
 parag.innerText = a;
 document.body.append(plusBtn, minusBtn, parag);
@@ -23,13 +27,13 @@ minusBtn.addEventListener("click", () => {
   changeColor(minusBtn, plusBtn);
 });
 
-const changeColor = function (aa, bb) {
-  aa.style.background = "none";
-  bb.style.background = "none";
+const changeColor = function (first, second) {
+  first.style.background = "pink";
+  second.style.background = "pink";
   if (a % 2 == 0) {
-    aa.style.background = "red";
-    bb.style.background = "none";
+    first.style.background = "red";
+    second.style.background = "pink";
   } else {
-    aa.style.background = "none";
+    first.style.background = "pink";
   }
 };
