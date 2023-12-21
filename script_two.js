@@ -6,7 +6,7 @@ secondInpt.id = "secondInpt";
 let submitBtn = document.createElement("button");
 submitBtn.type = "submit";
 submitBtn.id = "subm";
-submitBtn.innerText = "Create LIST";
+submitBtn.textContent = "Create LIST";
 let results = document.createElement("div");
 document.body.append(myForm, results);
 myForm.append(firstInpt, secondInpt, submitBtn);
@@ -26,11 +26,11 @@ function myFunction(event) {
   results.innerHTML = "";
   for (let i = 1; i <= inputForUnordered; i++) {
     let ulis = document.createElement("ul");
-    ulis.innerText = "Unordered";
+    ulis.textContent = "Unordered";
     results.append(ulis);
     for (let j = 1; j <= inputForOrdered; j++) {
       let olis = document.createElement("ol");
-      olis.innerText = "ordered";
+      olis.textContent = "ordered";
       ulis.append(olis);
     }
   }
